@@ -13,7 +13,10 @@
     },
     "name": "Polychrome",
     "type": "Polychrome",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 20
+    }
   },
   "01": {
     "id": "01",
@@ -29,7 +32,10 @@
     },
     "name": "Monochrome",
     "type": "Monochrome",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 20
+    }
   },
   "02": {
     "id": "02",
@@ -45,7 +51,10 @@
     },
     "name": "Bagboo",
     "type": "Bangboo",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 1
+    }
   },
   "03": {
     "id": "03",
@@ -61,7 +70,10 @@
     },
     "name": "Ben Bigger",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "04": {
     "id": "04",
@@ -77,7 +89,10 @@
     },
     "name": "Soukaku",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "05": {
     "id": "05",
@@ -93,7 +108,10 @@
     },
     "name": "Billy Kid",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "06": {
     "id": "06",
@@ -109,7 +127,10 @@
     },
     "name": "Corin Wickes",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "07": {
     "id": "07",
@@ -125,7 +146,10 @@
     },
     "name": "Soldier 0 - Anby",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "08": {
     "id": "08",
@@ -141,7 +165,10 @@
     },
     "name": "Anby Demara",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "09": {
     "id": "09",
@@ -157,7 +184,10 @@
     },
     "name": "Nicole Demara",
     "type": "Agent",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "10": {
     "id": "10",
@@ -173,7 +203,10 @@
     },
     "name": "Master Tape",
     "type": "Item",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "11": {
     "id": "11",
@@ -189,7 +222,10 @@
     },
     "name": "Encrypted Master Tape",
     "type": "Item",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "12": {
     "id": "12",
@@ -205,7 +241,10 @@
     },
     "name": "Fading Signal",
     "type": "Item",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "13": {
     "id": "13",
@@ -221,7 +260,10 @@
     },
     "name": "Big Cylinder",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "14": {
     "id": "14",
@@ -237,7 +279,10 @@
     },
     "name": "Bashful Demon",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "15": {
     "id": "15",
@@ -253,7 +298,10 @@
     },
     "name": "Starlight Engine Replica",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "16": {
     "id": "16",
@@ -269,7 +317,10 @@
     },
     "name": "Housekeeper",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "17": {
     "id": "17",
@@ -285,7 +336,10 @@
     },
     "name": "Severed Innocence",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "18": {
     "id": "18",
@@ -301,7 +355,10 @@
     },
     "name": "Demara Battery Mark II",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "19": {
     "id": "19",
@@ -317,7 +374,10 @@
     },
     "name": "The Vault",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "20": {
     "id": "20",
@@ -333,7 +393,10 @@
     },
     "name": "Hormone Punk - B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "21": {
     "id": "21",
@@ -349,7 +412,10 @@
     },
     "name": "Hormone Punk - A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "22": {
     "id": "22",
@@ -365,7 +431,10 @@
     },
     "name": "Hormone Punk - S",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "23": {
     "id": "23",
@@ -381,7 +450,10 @@
     },
     "name": "Swing Jazz - B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "24": {
     "id": "24",
@@ -397,7 +469,10 @@
     },
     "name": "Swing Jazz - A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "25": {
     "id": "25",
@@ -413,7 +488,10 @@
     },
     "name": "Swing Jazz - S",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "26": {
     "id": "26",
@@ -429,7 +507,10 @@
     },
     "name": "Woodpecker Electro - B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "27": {
     "id": "27",
@@ -445,7 +526,10 @@
     },
     "name": "Woodpecker Electro - A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "28": {
     "id": "28",
@@ -461,7 +545,10 @@
     },
     "name": "Woodpecker Electro - S",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "29": {
     "id": "29",
@@ -477,7 +564,10 @@
     },
     "name": "Disorder",
     "type": "Action",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   },
   "30": {
     "id": "30",
@@ -493,6 +583,9 @@
     },
     "name": "Pity",
     "type": "Action",
-    "cost": 0
+    "cost": 0,
+    "_legal": {
+      "ZZZ": 4
+    }
   }
 }

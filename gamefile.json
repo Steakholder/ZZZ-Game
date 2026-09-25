@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Opening hand: 6 cards.\nMulligan: once, choose any number from 0 to 6; selected cards are returned to the deck, the deck is shuffled, and the same number of cards are drawn.\nMain Deck: exactly 71 cards, maximum 4 copies of any card.\nBangboo: exactly 1 card, kept separate from the Main Deck.\nCurrency: exactly 20 total cards combined between Polychromes and Monochromes; any split is legal.\nStart of game: 6 Main Deck cards enter the Life Pool; 2 Polychromes enter the Wallet face up; the selected Bangboo enters the Bangboo Zone.\nFirst player's first turn: no normal 2-card Main Deck draw.\nEvery turn: draw 1 Polychrome into the Wallet; on all turns after the first player's opening turn, draw 2 Main Deck cards. Tapped cards untap normally at the start of their owner's turn.",
+  "customHelp": "Opening hand: 6 cards.\nMulligan: once, choose any number from 0 to 6; selected cards are returned to the deck, the deck is shuffled, and the same number of cards are drawn.\nMain Deck: exactly 71 cards, maximum 4 copies of any card.\nBangboo: exactly 1 card, kept separate from the Main Deck.\nCurrency: exactly 20 total cards combined between Polychromes and Monochromes; any split is legal.\nStart of game: 6 Main Deck cards enter the Life Pool; 2 Polychromes enter the Wallet face up; the selected Bangboo enters the Bangboo Zone.\nFirst player's first turn: no normal 2-card Main Deck draw.\nEvery turn: draw 1 Polychrome into the Wallet; on all turns after the first player's opening turn, draw 2 Main Deck cards. Tapped cards untap normally at the start of their owner's turn.\nCurrency deckbuilding: Polychromes and Monochromes are separate extra-deck categories. Each individual currency card may be included up to 20 copies. The intended combined maximum is 20 total currency cards. TCG Arena's documented deck ruleset has no cross-category sum validator, so the combined 20 rule cannot be enforced by the native deck-builder configuration alone.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -16,7 +16,8 @@
           "Monochrome"
         ],
         "gameplay": "Standard",
-        "deckRuleset": "Standard"
+        "deckRuleset": "Standard",
+        "legalityCode": "ZZZ"
       }
     ],
     "deckRulesets": {
@@ -36,12 +37,14 @@
           {
             "category": "Polychrome",
             "min": 0,
-            "max": 20
+            "max": 20,
+            "maxPerCard": 20
           },
           {
             "category": "Monochrome",
             "min": 0,
-            "max": 20
+            "max": 20,
+            "maxPerCard": 20
           }
         ]
       }
