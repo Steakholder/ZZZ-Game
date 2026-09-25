@@ -78,19 +78,6 @@
         "turnOrder": "default"
       },
       "beforeGameStart": {
-        "boardCategoriesInSideboard": [
-          "Bangboo",
-          "Polychrome",
-          "Monochrome"
-        ],
-        "boardCardSelection": [
-          {
-            "category": "Bangboo",
-            "min": 1,
-            "max": 1,
-            "unselectedDestination": "RemoveHidden"
-          }
-        ],
         "initialBoardSetup": [
           {
             "drawFromTop": "Deck",
@@ -98,14 +85,16 @@
             "destination": "Life_Pool"
           },
           {
-            "drawFromTop": "Polychromes_Deck",
+            "drawFromTop": "Polychrome",
             "count": 2,
             "destination": "Wallet"
           }
         ]
       },
       "categoriesAlreadyOnBoard": [
-        "Bangboo"
+        "Bangboo",
+        "Polychrome",
+        "Monochrome"
       ],
       "autoPlayFromHand": {
         "W-Engine": "Stack",
@@ -135,19 +124,19 @@
               ]
             },
             {
-              "section": "Wallet"
-            },
-            {
               "direction": "row",
               "content": [
                 {
-                  "section": "Monochromes_Deck"
-                },
-                {
-                  "section": "Polychromes_Deck"
-                },
-                {
                   "section": "Life_Pool"
+                },
+                {
+                  "section": "Monochrome"
+                },
+                {
+                  "section": "Polychrome"
+                },
+                {
+                  "section": "Wallet"
                 }
               ]
             }
@@ -156,39 +145,54 @@
         "sectionsDict": {
           "Lead_Zone": {
             "isHidden": "no",
-            "height": "MEDIUM",
+            "height": "8",
             "alignment": "CENTER",
-            "displayedTitle": "Lead Zone"
+            "displayedTitle": "Lead Zone",
+            "noQuickActions": true
           },
           "Reserve_Zone_1": {
             "isHidden": "no",
-            "height": "MEDIUM",
+            "height": "7",
             "alignment": "CENTER",
-            "displayedTitle": "Reserve Zone 1"
+            "displayedTitle": "Reserve Zone 1",
+            "noQuickActions": true
           },
           "Bangboo": {
             "isHidden": "no",
-            "height": "MEDIUM",
-            "alignment": "CENTER",
+            "height": "SMALL",
+            "alignment": "DECK",
             "displayedTitle": "Bangboo Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_2": {
             "isHidden": "no",
-            "height": "MEDIUM",
+            "height": "7",
             "alignment": "CENTER",
-            "displayedTitle": "Reserve Zone 2"
+            "displayedTitle": "Reserve Zone 2",
+            "noQuickActions": true
+          },
+          "Life_Pool": {
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "displayedTitle": "Life Pool",
+            "drawDestinations": {
+              "_default": "Stack"
+            },
+            "noAutoPayTo": true,
+            "noQuickActions": true
           },
           "Wallet": {
             "isHidden": "no",
-            "height": "MEDIUM",
+            "height": "SMALL",
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
-            "noAutoPayTo": true
+            "noAutoPayTo": true,
+            "noQuickActions": true
           },
-          "Monochromes_Deck": {
+          "Monochrome": {
             "isHidden": "yes",
-            "height": "MEDIUM",
+            "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Monochromes Deck",
             "drawDestinations": {
@@ -197,26 +201,15 @@
             "noAutoPayTo": true,
             "noQuickActions": true
           },
-          "Polychromes_Deck": {
+          "Polychrome": {
             "isHidden": "yes",
-            "height": "MEDIUM",
+            "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Polychromes Deck",
             "drawDestinations": {
               "_default": "Wallet"
             },
             "drawPerTurn": 1,
-            "noAutoPayTo": true,
-            "noQuickActions": true
-          },
-          "Life_Pool": {
-            "isHidden": "yes",
-            "height": "MEDIUM",
-            "alignment": "DECK",
-            "displayedTitle": "Life Pool",
-            "drawDestinations": {
-              "_default": "Stack"
-            },
             "noAutoPayTo": true,
             "noQuickActions": true
           }
