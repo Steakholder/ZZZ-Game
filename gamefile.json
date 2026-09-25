@@ -1,0 +1,271 @@
+{
+  "name": "Zenless Zone Zero TCG",
+  "cardRotation": 45,
+  "customHelp": "Zenless Zone Zero TCG\\nMain Deck: exactly 71 cards; maximum 4 copies of any card.\\nBangboo: exactly 1 Bangboo.\\nCurrency: exactly 20 total cards combined between Polychromes and Monochromes.\\nOpening hand: 6 cards. You may mulligan any number from 0 to 6 once; mulliganed cards are shuffled back and replaced one-for-one.\\nStart of game: 6 cards are placed into the Life Pool; the chosen Bangboo is placed in the Bangboo Zone; 2 Polychromes are placed face up in the Wallet.\\nStart of turn: the turn player draws 2 Main Deck cards (except on the first player's first turn), draws 1 Polychrome into the Wallet, and their tapped cards untap.",
+  "deckBuilding": {
+    "mainFilters": [
+      "type",
+      "cost"
+    ],
+    "formats": [
+      {
+        "title": "Standard",
+        "gameplay": "Standard",
+        "deckRuleset": "Standard"
+      }
+    ],
+    "deckRulesets": {
+      "Standard": {
+        "general": {
+          "min": 71,
+          "max": 71,
+          "maxPerCard": 4
+        },
+        "categories": [
+          {
+            "category": "Bangboo",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "category": "Polychrome",
+            "min": 0,
+            "max": 20
+          },
+          {
+            "category": "Monochrome",
+            "min": 0,
+            "max": 20
+          }
+        ]
+      }
+    }
+  },
+  "gameplay": {
+    "Standard": {
+      "mulligan": {
+        "startingHandSize": 6,
+        "mulliganCount": {
+          "max": 1
+        },
+        "mulliganCycle": {
+          "info": "You may mulligan any number of cards. Mulliganed cards are shuffled back into the deck and replaced with the same number of cards.",
+          "steps": [
+            "shuffle",
+            "draw"
+          ],
+          "selectionRange": {
+            "min": 0,
+            "max": 6
+          },
+          "keepCardsOrder": false
+        }
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "drawPerTurn": 2,
+        "sharedTurn": false,
+        "turnOrder": "default"
+      },
+      "beforeGameStart": {
+        "boardCategoriesInSideboard": [
+          "Bangboo"
+        ],
+        "boardCardSelection": [
+          {
+            "category": "Bangboo",
+            "min": 1,
+            "max": 1,
+            "unselectedDestination": "RemoveHidden"
+          }
+        ],
+        "initialBoardSetup": [
+          {
+            "drawFromTop": "Deck",
+            "count": 6,
+            "destination": "Life_Pool",
+            "overrideState": {
+              "isHidden": "yes"
+            }
+          },
+          {
+            "drawFromTop": "Polychromes_Deck",
+            "count": 2,
+            "destination": "Wallet"
+          },
+          {
+            "createCardId": "02",
+            "count": 1,
+            "destination": "Bangboo_Zone"
+          }
+        ]
+      },
+      "sections": {
+        "layout": {
+          "direction": "column",
+          "content": [
+            {
+              "section": "Lead_Zone",
+              "isSymmetricalForOpponents": true
+            },
+            {
+              "direction": "row",
+              "content": [
+                {
+                  "section": "Reserve_Zone_1"
+                },
+                {
+                  "section": "Bangboo_Zone"
+                },
+                {
+                  "section": "Reserve_Zone_2"
+                }
+              ],
+              "isSymmetricalForOpponents": true
+            },
+            {
+              "section": "Wallet",
+              "isSymmetricalForOpponents": true
+            },
+            {
+              "direction": "row",
+              "content": [
+                {
+                  "section": "Monochromes_Deck"
+                },
+                {
+                  "section": "Polychromes_Deck"
+                },
+                {
+                  "section": "Life_Pool"
+                }
+              ],
+              "isSymmetricalForOpponents": true
+            },
+            {
+              "section": "Game_Script"
+            }
+          ]
+        },
+        "sectionsDict": {
+          "Lead_Zone": {
+            "isHidden": "no",
+            "height": "14vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Lead Zone"
+          },
+          "Reserve_Zone_1": {
+            "isHidden": "no",
+            "height": "12vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Reserve Zone 1"
+          },
+          "Bangboo_Zone": {
+            "isHidden": "no",
+            "height": "12vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Bangboo Zone"
+          },
+          "Reserve_Zone_2": {
+            "isHidden": "no",
+            "height": "12vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Reserve Zone 2"
+          },
+          "Wallet": {
+            "isHidden": "no",
+            "height": "12vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Wallet",
+            "noAutoPayTo": true
+          },
+          "Monochromes_Deck": {
+            "isHidden": "yes",
+            "height": "12vh",
+            "alignment": "DECK",
+            "displayedTitle": "Monochromes Deck",
+            "drawDestinations": {
+              "_default": "Wallet"
+            },
+            "noAutoPayTo": true
+          },
+          "Polychromes_Deck": {
+            "isHidden": "yes",
+            "height": "12vh",
+            "alignment": "DECK",
+            "displayedTitle": "Polychromes Deck",
+            "drawDestinations": {
+              "_default": "Wallet"
+            },
+            "noAutoPayTo": true
+          },
+          "Life_Pool": {
+            "isHidden": "yes",
+            "height": "12vh",
+            "alignment": "DECK",
+            "displayedTitle": "Life Pool",
+            "drawDestinations": {
+              "_default": "Stack"
+            },
+            "autoPlayFromHand": {
+              "Agent": "Stack",
+              "W-Engine": "Stack",
+              "Disc Drive": "Stack",
+              "Item": "Stack",
+              "Action": "Stack"
+            },
+            "autoPlayFromStack": {
+              "Agent": "Hand",
+              "W-Engine": "Hand",
+              "Disc Drive": "Hand",
+              "Item": "Hand",
+              "Action": "Hand"
+            },
+            "noAutoPayTo": true
+          },
+          "Stack": {
+            "isHidden": "no",
+            "height": "16vh",
+            "alignment": "CENTER",
+            "displayedTitle": "Stack",
+            "autoPlayFromStack": {
+              "W-Engine": "Hand",
+              "Disc Drive": "Hand",
+              "Item": "Hand",
+              "Action": "Hand"
+            }
+          },
+          "Game_Script": {
+            "type": "custom",
+            "defaultValue": {},
+            "blueprint": {
+              "type": "div",
+              "props": {
+                "style": {
+                  "display": "none",
+                  "height": "0px",
+                  "width": "0px"
+                }
+              }
+            },
+            "events": {
+              "onNewTurn": "await zzzStartOfTurn()"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cards": {
+    "dataUrl": "https://raw.githubusercontent.com/Steakholder/ZZZ-Game/main/cards.json",
+    "cardBack": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/3_back.webp",
+    "extraCardBacks": {
+      "Polychrome": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/0_back.webp",
+      "Monochrome": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/1_back.webp",
+      "Bangboo": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/2_back.webp"
+    }
+  },
+  "scriptsUrls": [
+    "https://raw.githubusercontent.com/Steakholder/ZZZ-Game/main/zzz-game.js"
+  ]
+}
