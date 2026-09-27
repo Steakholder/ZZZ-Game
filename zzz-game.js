@@ -3,8 +3,11 @@
 // separate Polychrome and Monochrome extra decks for gameplay.
 
 async function zzzSplitCurrencyDeck() {
+  // A custom deckbuilding category is placed on its matching board section
+  // when listed in categoriesAlreadyOnBoard. Move those cards into the two
+  // gameplay decks based on their face type.
   const source = cards?.Currency ?? []
-  if (!source.length) return
+  if (!source.length) return false
 
   const polychromes = []
   const monochromes = []
@@ -17,6 +20,19 @@ async function zzzSplitCurrencyDeck() {
 
   if (polychromes.length) await functions.moveCards(polychromes, 'Polychrome', { noLogs: true })
   if (monochromes.length) await functions.moveCards(monochromes, 'Monochrome', { noLogs: true })
+  return true
+}
+
+async function zzzPrepareCurrency() {
+  // onPlayersMulligan fires after the initial board setup, so both currency
+  // decks exist before we attempt to draw the starting Wallet cards.
+  await zzzSplitCurrencyDeck()
+
+  const wallet = cards?.Wallet ?? []
+  const needed = Math.max(0, 2 - wallet.length)
+  if (needed > 0) {
+    await functions.drawFromExtraDeck('Polychrome', needed, false, 'Wallet')
+  }
 }
 
 async function zzzStartOfTurn() {
@@ -28,7 +44,6 @@ async function zzzStartOfTurn() {
     await functions.updateCards(allMyCards, { isTapped: false })
   }
 
-  // The first player still receives their Polychrome on turn 1; only the
-  // normal two-card Main Deck draw is suppressed on the first turn.
+  // Every turn, including the first player's first turn, adds one Polychrome.
   await functions.drawFromExtraDeck('Polychrome', 1, false, 'Wallet')
 }
