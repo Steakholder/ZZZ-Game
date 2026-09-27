@@ -132,8 +132,7 @@
             {
               "section": "Wallet",
               "style": {
-                "width": "24vh",
-                "flex": "0 0 24vh"
+                "alignSelf": "stretch"
               }
             },
             {
@@ -166,7 +165,10 @@
               ],
               "isSymmetricalForOpponents": true
             }
-          ]
+          ],
+          "style": {
+            "alignItems": "center"
+          }
         },
         "categoriesAlreadyOnBoard": [
           "Bangboo",
