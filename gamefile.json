@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Opening hand: 6 cards.\nMulligan: once, choose any number from 0 to 6; selected cards are returned to the deck, the deck is shuffled, and the same number of cards are drawn.\nMain Deck: exactly 71 cards, maximum 4 copies of any card.\nBangboo: exactly 1 card, kept separate from the Main Deck.\nCurrency: exactly 20 total cards combined between Polychromes and Monochromes; any split is legal.\nStart of game: 6 Main Deck cards enter the Life Pool; 2 Polychromes enter the Wallet face up; the selected Bangboo enters the Bangboo Zone.\nFirst player's first turn: no normal 2-card Main Deck draw.\nEvery turn: draw 1 Polychrome into the Wallet; on all turns after the first player's opening turn, draw 2 Main Deck cards. Tapped cards untap normally at the start of their owner's turn.\nCurrency deckbuilding: Polychromes and Monochromes are separate extra-deck categories. Each individual currency card may be included up to 20 copies. The intended combined maximum is 20 total currency cards. TCG Arena's documented deck ruleset has no cross-category sum validator, so the combined 20 rule cannot be enforced by the native deck-builder configuration alone.",
+  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap normally at the start of their owner's turn.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -11,8 +11,7 @@
       {
         "title": "Standard",
         "gameplay": "Standard",
-        "deckRuleset": "Standard",
-        "legalityCode": "ZZZ"
+        "deckRuleset": "Standard"
       }
     ],
     "deckRulesets": {
@@ -50,13 +49,13 @@
       "mulligan": {
         "startingHandSize": 6,
         "mulliganCount": {
+          "min": 0,
           "max": 1
         },
         "mulliganCycle": {
-          "info": "Choose any number from 0 to 6. The selected cards are returned to the deck, shuffled, and replaced.",
+          "info": "Choose any number from 0 to 6. The selected cards are returned to the deck and replaced with the same number of cards.",
           "steps": [
-            "toTop",
-            "shuffle",
+            "toBottom",
             "draw"
           ],
           "selectionRange": {
@@ -86,17 +85,6 @@
           }
         ]
       },
-      "categoriesAlreadyOnBoard": [
-        "Bangboo",
-        "Polychrome",
-        "Monochrome"
-      ],
-      "autoPlayFromHand": {
-        "W-Engine": "Stack",
-        "Disc Drive": "Stack",
-        "Item": "Stack",
-        "Action": "Stack"
-      },
       "sections": {
         "layout": {
           "direction": "column",
@@ -116,14 +104,15 @@
                 {
                   "section": "Reserve_Zone_2"
                 }
-              ]
+              ],
+              "isSymmetricalForOpponents": true
+            },
+            {
+              "section": "Wallet"
             },
             {
               "direction": "row",
               "content": [
-                {
-                  "section": "Life_Pool"
-                },
                 {
                   "section": "Monochrome"
                 },
@@ -131,11 +120,23 @@
                   "section": "Polychrome"
                 },
                 {
-                  "section": "Wallet"
+                  "section": "Life_Pool"
                 }
-              ]
+              ],
+              "isSymmetricalForOpponents": true
             }
           ]
+        },
+        "categoriesAlreadyOnBoard": [
+          "Bangboo",
+          "Polychrome",
+          "Monochrome"
+        ],
+        "autoPlayFromHand": {
+          "W-Engine": "Stack",
+          "Disc Drive": "Stack",
+          "Item": "Stack",
+          "Action": "Stack"
         },
         "sectionsDict": {
           "Lead_Zone": {
@@ -166,20 +167,9 @@
             "displayedTitle": "Reserve Zone 2",
             "noQuickActions": true
           },
-          "Life_Pool": {
-            "isHidden": "yes",
-            "height": "SMALL",
-            "alignment": "DECK",
-            "displayedTitle": "Life Pool",
-            "drawDestinations": {
-              "_default": "Stack"
-            },
-            "noAutoPayTo": true,
-            "noQuickActions": true
-          },
           "Wallet": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": "6",
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
             "noAutoPayTo": true,
@@ -207,6 +197,27 @@
             "drawPerTurn": 1,
             "noAutoPayTo": true,
             "noQuickActions": true
+          },
+          "Life_Pool": {
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "displayedTitle": "Life Pool",
+            "drawDestinations": {
+              "_default": "Stack"
+            },
+            "noAutoPayTo": true,
+            "noQuickActions": true
+          },
+          "Stack": {
+            "isDefaultSection": true,
+            "isHidden": "no",
+            "height": "HUGE",
+            "alignment": "NONE",
+            "isHorizontalAllowed": false,
+            "isGroupForbidden": true,
+            "displayedTitle": "Stack",
+            "noAutoPayTo": true
           }
         }
       }
