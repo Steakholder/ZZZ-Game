@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner\u2019s turn.",
+  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner’s turn.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -95,35 +95,68 @@
             {
               "direction": "row",
               "style": {
-                "display": "grid",
-                "gridTemplateColumns": "1fr auto 1fr",
+                "display": "flex",
                 "alignItems": "center",
                 "width": "100%",
-                "height": "10vh",
-                "flex": "0 0 10vh",
+                "height": "11vh",
+                "flex": "0 0 11vh",
                 "gap": "0"
               },
               "content": [
                 {
-                  "section": "Life_Pool",
+                  "direction": "row",
                   "style": {
-                    "gridColumn": "1",
-                    "justifySelf": "start",
-                    "marginLeft": "2vh",
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "10vh"
-                  }
+                    "height": "11vh",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center",
+                    "gap": "0"
+                  },
+                  "content": [
+                    {
+                      "section": "Life_Pool",
+                      "style": {
+                        "width": "14vh",
+                        "flex": "0 0 14vh",
+                        "height": "11vh",
+                        "margin": "0"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "section": "Lead_Zone",
+                  "direction": "row",
                   "style": {
-                    "gridColumn": "2",
-                    "justifySelf": "center",
-                    "width": "24vh",
-                    "flex": "0 0 24vh",
-                    "height": "10vh"
-                  }
+                    "flex": "1 1 auto",
+                    "height": "11vh",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "gap": "0"
+                  },
+                  "content": [
+                    {
+                      "section": "Lead_Zone",
+                      "style": {
+                        "width": "24vh",
+                        "flex": "0 0 24vh",
+                        "height": "11vh",
+                        "margin": "0"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "direction": "row",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh",
+                    "height": "11vh",
+                    "justifyContent": "flex-end",
+                    "alignItems": "center",
+                    "gap": "0"
+                  },
+                  "content": []
                 }
               ],
               "isSymmetricalForOpponents": true
@@ -135,8 +168,8 @@
                 "justifyContent": "center",
                 "alignItems": "center",
                 "width": "100%",
-                "height": "10vh",
-                "flex": "0 0 10vh",
+                "height": "11vh",
+                "flex": "0 0 11vh",
                 "gap": "0"
               },
               "content": [
@@ -145,7 +178,7 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "10vh",
+                    "height": "11vh",
                     "margin": "0"
                   }
                 },
@@ -154,7 +187,7 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "10vh",
+                    "height": "11vh",
                     "margin": "0"
                   }
                 },
@@ -163,7 +196,7 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "10vh",
+                    "height": "11vh",
                     "margin": "0"
                   }
                 }
@@ -173,47 +206,77 @@
             {
               "direction": "row",
               "style": {
-                "display": "grid",
-                "gridTemplateColumns": "1fr minmax(60vh, 1fr) 1fr",
+                "display": "flex",
                 "alignItems": "center",
                 "width": "100%",
-                "height": "10vh",
-                "flex": "0 0 10vh",
+                "height": "11vh",
+                "flex": "0 0 11vh",
                 "gap": "0"
               },
               "content": [
                 {
-                  "section": "Polychrome",
+                  "direction": "row",
                   "style": {
-                    "gridColumn": "1",
-                    "justifySelf": "end",
-                    "width": "14vh",
-                    "flex": "0 0 14vh",
-                    "height": "10vh",
-                    "margin": "0"
-                  }
+                    "width": "30vh",
+                    "flex": "0 0 30vh",
+                    "height": "11vh",
+                    "justifyContent": "flex-end",
+                    "alignItems": "center",
+                    "gap": "1vh"
+                  },
+                  "content": [
+                    {
+                      "section": "Polychrome",
+                      "style": {
+                        "width": "14vh",
+                        "flex": "0 0 14vh",
+                        "height": "11vh",
+                        "margin": "0"
+                      }
+                    },
+                    {
+                      "section": "Monochrome",
+                      "style": {
+                        "width": "14vh",
+                        "flex": "0 0 14vh",
+                        "height": "11vh",
+                        "margin": "0"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "section": "Monochrome",
+                  "direction": "row",
                   "style": {
-                    "gridColumn": "1",
-                    "justifySelf": "end",
-                    "width": "14vh",
-                    "flex": "0 0 14vh",
-                    "height": "10vh",
-                    "marginRight": "1vh",
-                    "marginLeft": "0"
-                  }
+                    "flex": "1 1 auto",
+                    "height": "11vh",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "gap": "0"
+                  },
+                  "content": [
+                    {
+                      "section": "Wallet",
+                      "style": {
+                        "width": "100%",
+                        "height": "11vh",
+                        "margin": "0",
+                        "flex": "1 1 auto"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "section": "Wallet",
+                  "direction": "row",
                   "style": {
-                    "gridColumn": "2",
-                    "justifySelf": "stretch",
-                    "width": "100%",
-                    "height": "10vh",
-                    "margin": "0"
-                  }
+                    "width": "30vh",
+                    "flex": "0 0 30vh",
+                    "height": "11vh",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center",
+                    "gap": "0"
+                  },
+                  "content": []
                 }
               ],
               "isSymmetricalForOpponents": true
@@ -239,35 +302,35 @@
         "sectionsDict": {
           "Lead_Zone": {
             "isHidden": "no",
-            "height": 10,
+            "height": 11,
             "alignment": "CENTER",
             "displayedTitle": "Lead Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_1": {
             "isHidden": "no",
-            "height": 10,
+            "height": 11,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 1",
             "noQuickActions": true
           },
           "Bangboo": {
             "isHidden": "no",
-            "height": 10,
+            "height": 11,
             "alignment": "CENTER",
             "displayedTitle": "Bangboo Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_2": {
             "isHidden": "no",
-            "height": 10,
+            "height": 11,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 2",
             "noQuickActions": true
           },
           "Wallet": {
             "isHidden": "no",
-            "height": 10,
+            "height": 11,
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
             "noAutoPayTo": true,
@@ -275,7 +338,7 @@
           },
           "Monochrome": {
             "isHidden": "yes",
-            "height": 10,
+            "height": 11,
             "alignment": "DECK",
             "displayedTitle": "Monochromes Deck",
             "drawDestinations": {
@@ -286,7 +349,7 @@
           },
           "Polychrome": {
             "isHidden": "yes",
-            "height": 10,
+            "height": 11,
             "alignment": "DECK",
             "displayedTitle": "Polychromes Deck",
             "drawDestinations": {
@@ -298,7 +361,7 @@
           },
           "Life_Pool": {
             "isHidden": "yes",
-            "height": 10,
+            "height": 11,
             "alignment": "DECK",
             "displayedTitle": "Life Pool",
             "drawDestinations": {
