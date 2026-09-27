@@ -98,18 +98,21 @@
                 "display": "grid",
                 "gridTemplateColumns": "1fr auto 1fr",
                 "alignItems": "center",
-                "height": "9vh",
-                "flex": "0 0 9vh"
+                "width": "100%",
+                "height": "10vh",
+                "flex": "0 0 10vh",
+                "gap": "0"
               },
               "content": [
                 {
                   "section": "Life_Pool",
                   "style": {
+                    "gridColumn": "1",
                     "justifySelf": "start",
                     "marginLeft": "2vh",
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh"
+                    "height": "10vh"
                   }
                 },
                 {
@@ -119,7 +122,7 @@
                     "justifySelf": "center",
                     "width": "24vh",
                     "flex": "0 0 24vh",
-                    "height": "9vh"
+                    "height": "10vh"
                   }
                 }
               ],
@@ -128,10 +131,13 @@
             {
               "direction": "row",
               "style": {
+                "display": "flex",
                 "justifyContent": "center",
                 "alignItems": "center",
-                "height": "9vh",
-                "flex": "0 0 9vh"
+                "width": "100%",
+                "height": "10vh",
+                "flex": "0 0 10vh",
+                "gap": "0"
               },
               "content": [
                 {
@@ -139,7 +145,8 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh"
+                    "height": "10vh",
+                    "margin": "0"
                   }
                 },
                 {
@@ -147,7 +154,8 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh"
+                    "height": "10vh",
+                    "margin": "0"
                   }
                 },
                 {
@@ -155,7 +163,8 @@
                   "style": {
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh"
+                    "height": "10vh",
+                    "margin": "0"
                   }
                 }
               ],
@@ -164,37 +173,46 @@
             {
               "direction": "row",
               "style": {
+                "display": "grid",
+                "gridTemplateColumns": "1fr minmax(60vh, 1fr) 1fr",
                 "alignItems": "center",
-                "height": "9vh",
-                "flex": "0 0 9vh",
-                "width": "100%"
+                "width": "100%",
+                "height": "10vh",
+                "flex": "0 0 10vh",
+                "gap": "0"
               },
               "content": [
                 {
                   "section": "Polychrome",
                   "style": {
+                    "gridColumn": "1",
+                    "justifySelf": "end",
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh",
-                    "marginLeft": "2vh"
+                    "height": "10vh",
+                    "margin": "0"
                   }
                 },
                 {
                   "section": "Monochrome",
                   "style": {
+                    "gridColumn": "1",
+                    "justifySelf": "end",
                     "width": "14vh",
                     "flex": "0 0 14vh",
-                    "height": "9vh",
-                    "marginLeft": "2vh"
+                    "height": "10vh",
+                    "marginRight": "1vh",
+                    "marginLeft": "0"
                   }
                 },
                 {
                   "section": "Wallet",
                   "style": {
-                    "flex": "1 1 auto",
-                    "height": "9vh",
-                    "marginLeft": "2vh",
-                    "marginRight": "2vh"
+                    "gridColumn": "2",
+                    "justifySelf": "stretch",
+                    "width": "100%",
+                    "height": "10vh",
+                    "margin": "0"
                   }
                 }
               ],
@@ -202,8 +220,10 @@
             }
           ],
           "style": {
-            "alignItems": "center",
-            "justifyContent": "flex-start"
+            "width": "100%",
+            "alignItems": "stretch",
+            "justifyContent": "flex-start",
+            "gap": "0"
           }
         },
         "categoriesAlreadyOnBoard": [
@@ -219,35 +239,35 @@
         "sectionsDict": {
           "Lead_Zone": {
             "isHidden": "no",
-            "height": 9,
+            "height": 10,
             "alignment": "CENTER",
             "displayedTitle": "Lead Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_1": {
             "isHidden": "no",
-            "height": 9,
+            "height": 10,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 1",
             "noQuickActions": true
           },
           "Bangboo": {
             "isHidden": "no",
-            "height": 9,
+            "height": 10,
             "alignment": "CENTER",
             "displayedTitle": "Bangboo Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_2": {
             "isHidden": "no",
-            "height": 9,
+            "height": 10,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 2",
             "noQuickActions": true
           },
           "Wallet": {
             "isHidden": "no",
-            "height": 9,
+            "height": 10,
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
             "noAutoPayTo": true,
@@ -255,7 +275,7 @@
           },
           "Monochrome": {
             "isHidden": "yes",
-            "height": 9,
+            "height": 10,
             "alignment": "DECK",
             "displayedTitle": "Monochromes Deck",
             "drawDestinations": {
@@ -266,7 +286,7 @@
           },
           "Polychrome": {
             "isHidden": "yes",
-            "height": 9,
+            "height": 10,
             "alignment": "DECK",
             "displayedTitle": "Polychromes Deck",
             "drawDestinations": {
@@ -278,7 +298,7 @@
           },
           "Life_Pool": {
             "isHidden": "yes",
-            "height": 9,
+            "height": 10,
             "alignment": "DECK",
             "displayedTitle": "Life Pool",
             "drawDestinations": {
