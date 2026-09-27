@@ -12,8 +12,9 @@
       }
     },
     "name": "Polychrome",
-    "type": "Polychrome",
-    "cost": 0
+    "type": "Currency",
+    "cost": 0,
+    "currencyType": "Polychrome"
   },
   "01": {
     "id": "01",
@@ -28,8 +29,9 @@
       }
     },
     "name": "Monochrome",
-    "type": "Monochrome",
-    "cost": 0
+    "type": "Currency",
+    "cost": 0,
+    "currencyType": "Monochrome"
   },
   "02": {
     "id": "02",

@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap normally at the start of their owner's turn.\nMultiplayer: all players must complete the platform's pre-game Ready/Play step; gamefile scripting cannot force another player's Ready state.",
+  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner’s turn.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -11,7 +11,11 @@
       {
         "title": "Standard",
         "gameplay": "Standard",
-        "deckRuleset": "Standard"
+        "deckRuleset": "Standard",
+        "customCategories": [
+          "Bangboo",
+          "Currency"
+        ]
       }
     ],
     "deckRulesets": {
@@ -29,14 +33,8 @@
             "maxPerCard": 1
           },
           {
-            "category": "Polychrome",
-            "min": 0,
-            "max": 20,
-            "maxPerCard": 20
-          },
-          {
-            "category": "Monochrome",
-            "min": 0,
+            "category": "Currency",
+            "min": 20,
             "max": 20,
             "maxPerCard": 20
           }
@@ -95,50 +93,84 @@
           "direction": "column",
           "content": [
             {
-              "section": "Lead_Zone"
+              "section": "Lead_Zone",
+              "style": {
+                "width": "24vh",
+                "flex": "0 0 24vh"
+              }
             },
             {
               "direction": "row",
+              "style": {
+                "justifyContent": "center"
+              },
               "content": [
                 {
-                  "section": "Reserve_Zone_1"
+                  "section": "Reserve_Zone_1",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 },
                 {
-                  "section": "Bangboo"
+                  "section": "Bangboo",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 },
                 {
-                  "section": "Reserve_Zone_2"
+                  "section": "Reserve_Zone_2",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 }
               ],
               "isSymmetricalForOpponents": true
             },
             {
-              "section": "Wallet"
+              "section": "Wallet",
+              "style": {
+                "width": "24vh",
+                "flex": "0 0 24vh"
+              }
             },
             {
               "direction": "row",
+              "style": {
+                "justifyContent": "center"
+              },
               "content": [
                 {
-                  "section": "Monochrome"
+                  "section": "Life_Pool",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 },
                 {
-                  "section": "Polychrome"
+                  "section": "Monochrome",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 },
                 {
-                  "section": "Life_Pool"
+                  "section": "Polychrome",
+                  "style": {
+                    "width": "14vh",
+                    "flex": "0 0 14vh"
+                  }
                 }
               ],
               "isSymmetricalForOpponents": true
-            },
-            {
-              "section": "ZZZ_Script"
             }
           ]
         },
         "categoriesAlreadyOnBoard": [
           "Bangboo",
-          "Polychrome",
-          "Monochrome"
+          "Currency"
         ],
         "autoPlayFromHand": {
           "W-Engine": "Stack",
@@ -149,14 +181,14 @@
         "sectionsDict": {
           "Lead_Zone": {
             "isHidden": "no",
-            "height": "8",
+            "height": "SMALL",
             "alignment": "CENTER",
             "displayedTitle": "Lead Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_1": {
             "isHidden": "no",
-            "height": "7",
+            "height": "SMALL",
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 1",
             "noQuickActions": true
@@ -164,20 +196,20 @@
           "Bangboo": {
             "isHidden": "no",
             "height": "SMALL",
-            "alignment": "DECK",
+            "alignment": "CENTER",
             "displayedTitle": "Bangboo Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_2": {
             "isHidden": "no",
-            "height": "7",
+            "height": "SMALL",
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 2",
             "noQuickActions": true
           },
           "Wallet": {
             "isHidden": "no",
-            "height": "6",
+            "height": "SMALL",
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
             "noAutoPayTo": true,
@@ -232,8 +264,17 @@
               "children": []
             },
             "events": {
-              "onNewTurn": "await zzzStartOfTurn()"
+              "onNewTurn": "await zzzStartOfTurn()",
+              "onPlayersDeckPicked": "await zzzSplitCurrencyDeck()"
             }
+          },
+          "Currency": {
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "displayedTitle": "Currency (Deckbuilding Pool)",
+            "noAutoPayTo": true,
+            "noQuickActions": true
           }
         },
         "autoPlayFromStack": {
