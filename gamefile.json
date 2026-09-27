@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner’s turn.",
+  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner\u2019s turn.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -67,18 +67,6 @@
         "drawPerTurn": 2,
         "sharedTurn": false,
         "turnOrder": "default"
-      },
-      "beforeGameStart": {
-        "initialBoardSetup": [
-          {
-            "drawFromTop": "Deck",
-            "count": 6,
-            "destination": "Life_Pool",
-            "overrideState": {
-              "isHidden": "yes"
-            }
-          }
-        ]
       },
       "sections": {
         "layout": {
@@ -379,7 +367,7 @@
               "children": []
             },
             "events": {
-              "onPlayersDeckPicked": "await zzzSplitCurrencyDeck()",
+              "onPlayersDeckPicked": "await zzzSetupPreGame()",
               "onPlayersMulligan": "await zzzPrepareCurrency()",
               "onPlayersReady": "await zzzPrepareCurrency()"
             }
@@ -390,7 +378,10 @@
             "alignment": "DECK",
             "displayedTitle": "Currency (Deckbuilding Pool)",
             "noAutoPayTo": true,
-            "noQuickActions": true
+            "noQuickActions": true,
+            "events": {
+              "onCardsEnter": "await zzzSplitCurrencyDeck()"
+            }
           }
         },
         "autoPlayFromStack": {
