@@ -96,34 +96,41 @@
               "section": "Lead_Zone",
               "style": {
                 "width": "24vh",
-                "flex": "0 0 24vh"
+                "flex": "0 0 7vh",
+                "height": "7vh"
               }
             },
             {
               "direction": "row",
               "style": {
-                "justifyContent": "center"
+                "justifyContent": "center",
+                "height": "7vh",
+                "flex": "0 0 7vh",
+                "alignItems": "center"
               },
               "content": [
                 {
                   "section": "Reserve_Zone_1",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 },
                 {
                   "section": "Bangboo",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 },
                 {
                   "section": "Reserve_Zone_2",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 }
               ],
@@ -132,34 +139,42 @@
             {
               "section": "Wallet",
               "style": {
-                "alignSelf": "stretch"
+                "alignSelf": "stretch",
+                "height": "7vh",
+                "flex": "0 0 7vh"
               }
             },
             {
               "direction": "row",
               "style": {
-                "justifyContent": "center"
+                "justifyContent": "center",
+                "height": "7vh",
+                "flex": "0 0 7vh",
+                "alignItems": "center"
               },
               "content": [
                 {
                   "section": "Life_Pool",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 },
                 {
                   "section": "Monochrome",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 },
                 {
                   "section": "Polychrome",
                   "style": {
                     "width": "14vh",
-                    "flex": "0 0 14vh"
+                    "flex": "0 0 14vh",
+                    "height": "7vh"
                   }
                 }
               ],
@@ -167,7 +182,8 @@
             }
           ],
           "style": {
-            "alignItems": "center"
+            "alignItems": "center",
+            "justifyContent": "flex-start"
           }
         },
         "categoriesAlreadyOnBoard": [
@@ -183,35 +199,35 @@
         "sectionsDict": {
           "Lead_Zone": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Lead Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_1": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 1",
             "noQuickActions": true
           },
           "Bangboo": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Bangboo Zone",
             "noQuickActions": true
           },
           "Reserve_Zone_2": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Reserve Zone 2",
             "noQuickActions": true
           },
           "Wallet": {
             "isHidden": "no",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Wallet",
             "noAutoPayTo": true,
@@ -219,7 +235,7 @@
           },
           "Monochrome": {
             "isHidden": "yes",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "DECK",
             "displayedTitle": "Monochromes Deck",
             "drawDestinations": {
@@ -230,7 +246,7 @@
           },
           "Polychrome": {
             "isHidden": "yes",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "DECK",
             "displayedTitle": "Polychromes Deck",
             "drawDestinations": {
@@ -242,7 +258,7 @@
           },
           "Life_Pool": {
             "isHidden": "yes",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "DECK",
             "displayedTitle": "Life Pool",
             "drawDestinations": {
@@ -272,7 +288,7 @@
           },
           "Currency": {
             "isHidden": "yes",
-            "height": "SMALL",
+            "height": 7,
             "alignment": "DECK",
             "displayedTitle": "Currency (Deckbuilding Pool)",
             "noAutoPayTo": true,
