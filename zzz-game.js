@@ -1,12 +1,27 @@
 // ZZZ TCG Arena automation
-// Currency is deckbuilt as one combined 20-card category, then split into
-// separate Polychrome and Monochrome extra decks for gameplay.
+// Currency is one combined deckbuilding category, then split into separate
+// Polychrome and Monochrome extra decks for gameplay.
+
+function getCurrencyCards() {
+  const staged = cards?.Currency ?? []
+  if (staged.length) return staged
+
+  // Fallback: locate any cards whose deckbuilding type is Currency.
+  // This avoids relying on the staging section name if the engine exposes
+  // the custom category under a different internal section during setup.
+  const found = []
+  for (const [sectionName, sectionCards] of Object.entries(cards ?? {})) {
+    if (sectionName === 'Polychrome' || sectionName === 'Monochrome') continue
+    for (const card of (sectionCards ?? [])) {
+      const data = functions.getCardData(card)
+      if (data?.type === 'Currency') found.push(card)
+    }
+  }
+  return found
+}
 
 async function zzzSplitCurrencyDeck() {
-  // A custom deckbuilding category is placed on its matching board section
-  // when listed in categoriesAlreadyOnBoard. Move those cards into the two
-  // gameplay decks based on their face type.
-  const source = cards?.Currency ?? []
+  const source = getCurrencyCards()
   if (!source.length) return false
 
   const polychromes = []
@@ -14,36 +29,45 @@ async function zzzSplitCurrencyDeck() {
 
   for (const card of source) {
     const data = functions.getCardData(card)
-    if (data?.type === 'Polychrome') polychromes.push(card)
-    else if (data?.type === 'Monochrome') monochromes.push(card)
+    if (data?.type === 'Currency') {
+      if (data?.currencyType === 'Polychrome') polychromes.push(card)
+      else if (data?.currencyType === 'Monochrome') monochromes.push(card)
+    } else if (data?.face?.front?.type === 'Polychrome') {
+      polychromes.push(card)
+    } else if (data?.face?.front?.type === 'Monochrome') {
+      monochromes.push(card)
+    }
   }
 
   if (polychromes.length) await functions.moveCards(polychromes, 'Polychrome', { noLogs: true })
   if (monochromes.length) await functions.moveCards(monochromes, 'Monochrome', { noLogs: true })
-  return true
+  return polychromes.length + monochromes.length > 0
 }
 
 async function zzzPrepareCurrency() {
-  // onPlayersMulligan fires after the initial board setup, so both currency
-  // decks exist before we attempt to draw the starting Wallet cards.
-  await zzzSplitCurrencyDeck()
+  if (game?.data?.ZZZ_Script?.currencyPrepared) return
+
+  const split = await zzzSplitCurrencyDeck()
+  if (!split) return
 
   const wallet = cards?.Wallet ?? []
   const needed = Math.max(0, 2 - wallet.length)
-  if (needed > 0) {
+  if (needed > 0 && (cards?.Polychrome ?? []).length >= needed) {
     await functions.drawFromExtraDeck('Polychrome', needed, false, 'Wallet')
   }
+
+  game.data.ZZZ_Script.currencyPrepared = true
 }
 
 async function zzzStartOfTurn() {
   if (!game?.turn?.isMyTurn) return
 
-  // Untap every card currently owned by the active player.
   const allMyCards = Object.values(cards ?? {}).flat().filter(Boolean)
   if (allMyCards.length) {
     await functions.updateCards(allMyCards, { isTapped: false })
   }
 
-  // Every turn, including the first player's first turn, adds one Polychrome.
-  await functions.drawFromExtraDeck('Polychrome', 1, false, 'Wallet')
+  if ((cards?.Polychrome ?? []).length > 0) {
+    await functions.drawFromExtraDeck('Polychrome', 1, false, 'Wallet')
+  }
 }
