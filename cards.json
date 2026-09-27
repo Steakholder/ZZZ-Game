@@ -12,7 +12,7 @@
       }
     },
     "name": "Polychrome",
-    "type": "Currency",
+    "type": "Polychrome",
     "cost": 0,
     "currencyType": "Polychrome"
   },
@@ -29,7 +29,7 @@
       }
     },
     "name": "Monochrome",
-    "type": "Currency",
+    "type": "Monochrome",
     "cost": 0,
     "currencyType": "Monochrome"
   },

@@ -1,7 +1,7 @@
 {
   "name": "Zenless Zone Zero TCG",
   "cardRotation": 45,
-  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner\u2019s turn.",
+  "customHelp": "Main Deck: exactly 71 cards, maximum 4 copies of each Main Deck card.\nBangboo: exactly 1 Bangboo card in its own deck.\nCurrency: Polychromes and Monochromes are separate decks; together they contain 20 cards total.\nOpening hand: 6 cards. You may mulligan any number of cards once.\nFirst player's first turn: no normal 2-card draw.\nOther turns: draw 2 Main Deck cards and 1 Polychrome. Tapped cards untap automatically at the start of their owner’s turn.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -13,17 +13,16 @@
         "gameplay": "Standard",
         "deckRuleset": "Standard",
         "customCategories": [
-          "Bangboo",
-          "Currency"
+          "Bangboo"
         ]
       }
     ],
     "deckRulesets": {
       "Standard": {
         "general": {
-          "min": 71,
-          "max": 71,
-          "maxPerCard": 4
+          "min": 63,
+          "max": 63,
+          "maxPerCard": 3
         },
         "categories": [
           {
@@ -33,8 +32,14 @@
             "maxPerCard": 1
           },
           {
-            "category": "Currency",
-            "min": 12,
+            "category": "Polychrome",
+            "min": 0,
+            "max": 12,
+            "maxPerCard": 12
+          },
+          {
+            "category": "Monochrome",
+            "min": 0,
             "max": 12,
             "maxPerCard": 12
           }
@@ -67,6 +72,26 @@
         "drawPerTurn": 2,
         "sharedTurn": false,
         "turnOrder": "default"
+      },
+      "beforeGameStart": {
+        "initialBoardSetup": [
+          {
+            "drawFromTop": "Deck",
+            "count": 6,
+            "destination": "Life_Pool",
+            "overrideState": {
+              "isHidden": "yes"
+            }
+          },
+          {
+            "drawFromTop": "Polychrome",
+            "count": 2,
+            "destination": "Wallet",
+            "overrideState": {
+              "isHidden": "no"
+            }
+          }
+        ]
       },
       "sections": {
         "layout": {
@@ -271,7 +296,8 @@
         },
         "categoriesAlreadyOnBoard": [
           "Bangboo",
-          "Currency"
+          "Polychrome",
+          "Monochrome"
         ],
         "autoPlayFromHand": {
           "W-Engine": "Stack",
@@ -352,9 +378,7 @@
           },
           "ZZZ_Script": {
             "type": "custom",
-            "defaultValue": {
-              "currencyPrepared": false
-            },
+            "defaultValue": {},
             "blueprint": {
               "type": "div",
               "props": {
@@ -367,20 +391,7 @@
               "children": []
             },
             "events": {
-              "onPlayersDeckPicked": "await zzzSetupPreGame()",
-              "onPlayersMulligan": "await zzzPrepareCurrency()",
-              "onPlayersReady": "await zzzPrepareCurrency()"
-            }
-          },
-          "Currency": {
-            "isHidden": "yes",
-            "height": 7,
-            "alignment": "DECK",
-            "displayedTitle": "Currency (Deckbuilding Pool)",
-            "noAutoPayTo": true,
-            "noQuickActions": true,
-            "events": {
-              "onCardsEnter": "await zzzSplitCurrencyDeck()"
+              "onNewTurn": "await zzzStartOfTurn()"
             }
           }
         },
