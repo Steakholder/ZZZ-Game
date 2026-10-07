@@ -7,13 +7,14 @@
           "name": "Polychrome"
         },
         "type": "Polychrome",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/00.webp"
       }
     },
     "name": "Polychrome",
     "type": "Polychrome",
-    "cost": 0
+    "cost": 10,
+    "currencyType": "Polychrome"
   },
   "01": {
     "id": "01",
@@ -23,16 +24,17 @@
           "name": "Monochrome"
         },
         "type": "Monochrome",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/01.webp"
       }
     },
     "name": "Monochrome",
     "type": "Monochrome",
-    "cost": 0
+    "cost": 10,
+    "currencyType": "Monochrome"
   },
-  "33": {
-    "id": "33",
+  "05": {
+    "id": "05",
     "face": {
       "front": {
         "name": {
@@ -40,7 +42,7 @@
         },
         "type": "Bangboo",
         "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/33.webp"
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/05.webp"
       }
     },
     "name": "Amillion",
@@ -63,8 +65,8 @@
     "type": "Bangboo",
     "cost": 0
   },
-  "32": {
-    "id": "32",
+  "04": {
+    "id": "04",
     "face": {
       "front": {
         "name": {
@@ -72,15 +74,15 @@
         },
         "type": "Bangboo",
         "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/32.webp"
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/04.webp"
       }
     },
     "name": "Butler",
     "type": "Bangboo",
     "cost": 0
   },
-  "31": {
-    "id": "31",
+  "03": {
+    "id": "03",
     "face": {
       "front": {
         "name": {
@@ -88,7 +90,7 @@
         },
         "type": "Bangboo",
         "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/31.webp"
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/03.webp"
       }
     },
     "name": "Safety",
@@ -103,13 +105,13 @@
           "name": "Anton Ivanov"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/35.webp"
       }
     },
     "name": "Anton Ivanov",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
   "42": {
     "id": "42",
@@ -119,45 +121,45 @@
           "name": "Drill Rig"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/42.webp"
       }
     },
     "name": "Drill Rig",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "03": {
-    "id": "03",
+  "06": {
+    "id": "06",
     "face": {
       "front": {
         "name": {
           "name": "Ben Bigger"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/03.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/06.webp"
       }
     },
     "name": "Ben Bigger",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
-  "13": {
-    "id": "13",
+  "16": {
+    "id": "16",
     "face": {
       "front": {
         "name": {
           "name": "Big Cylinder"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/13.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/16.webp"
       }
     },
     "name": "Big Cylinder",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "37": {
     "id": "37",
@@ -167,13 +169,13 @@
           "name": "Grace Howard"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/37.webp"
       }
     },
     "name": "Grace Howard",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
   "44": {
     "id": "44",
@@ -183,13 +185,13 @@
           "name": "Fusion Compiler"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/44.webp"
       }
     },
     "name": "Fusion Compiler",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "38": {
     "id": "38",
@@ -199,13 +201,13 @@
           "name": "Koleda Belobog"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/38.webp"
       }
     },
     "name": "Koleda Belobog",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
   "45": {
     "id": "45",
@@ -215,77 +217,77 @@
           "name": "Hellfire Gears"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/45.webp"
       }
     },
     "name": "Hellfire Gears",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "08": {
-    "id": "08",
+  "11": {
+    "id": "11",
     "face": {
       "front": {
         "name": {
           "name": "Anby Demara"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/08.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/11.webp"
       }
     },
     "name": "Anby Demara",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
-  "18": {
-    "id": "18",
+  "21": {
+    "id": "21",
     "face": {
       "front": {
         "name": {
           "name": "Demara Battery Mark II"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/18.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/21.webp"
       }
     },
     "name": "Demara Battery Mark II",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "05": {
-    "id": "05",
+  "08": {
+    "id": "08",
     "face": {
       "front": {
         "name": {
           "name": "Billy Kid"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/05.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/08.webp"
       }
     },
     "name": "Billy Kid",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
-  "15": {
-    "id": "15",
+  "18": {
+    "id": "18",
     "face": {
       "front": {
         "name": {
           "name": "Starlight Engine Replica"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/15.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/18.webp"
       }
     },
     "name": "Starlight Engine Replica",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "39": {
     "id": "39",
@@ -295,13 +297,13 @@
           "name": "Nekomiya Mana"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/39.webp"
       }
     },
     "name": "Nekomiya Mana",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
   "46": {
     "id": "46",
@@ -311,109 +313,109 @@
           "name": "Steel Cushion"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/46.webp"
       }
     },
     "name": "Steel Cushion",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "09": {
-    "id": "09",
+  "12": {
+    "id": "12",
     "face": {
       "front": {
         "name": {
           "name": "Nicole Demara"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/09.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/12.webp"
       }
     },
     "name": "Nicole Demara",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
-  "19": {
-    "id": "19",
+  "22": {
+    "id": "22",
     "face": {
       "front": {
         "name": {
           "name": "The Vault"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/19.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/22.webp"
       }
     },
     "name": "The Vault",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "07": {
-    "id": "07",
+  "10": {
+    "id": "10",
     "face": {
       "front": {
         "name": {
           "name": "Soldier 0 - Anby"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/07.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/10.webp"
       }
     },
     "name": "Soldier 0 - Anby",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
-  "17": {
-    "id": "17",
+  "20": {
+    "id": "20",
     "face": {
       "front": {
         "name": {
           "name": "Severed Innocence"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/17.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/20.webp"
       }
     },
     "name": "Severed Innocence",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "04": {
-    "id": "04",
+  "07": {
+    "id": "07",
     "face": {
       "front": {
         "name": {
           "name": "Soukaku"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/04.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/07.webp"
       }
     },
     "name": "Soukaku",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
-  "14": {
-    "id": "14",
+  "17": {
+    "id": "17",
     "face": {
       "front": {
         "name": {
           "name": "Bashful Demon"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/14.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/17.webp"
       }
     },
     "name": "Bashful Demon",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "34": {
     "id": "34",
@@ -423,13 +425,13 @@
           "name": "Alexandrina Sebastiane"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/34.webp"
       }
     },
     "name": "Alexandrina Sebastiane",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
   "41": {
     "id": "41",
@@ -439,45 +441,45 @@
           "name": "Weeping Cradle"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/41.webp"
       }
     },
     "name": "Weeping Cradle",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "06": {
-    "id": "06",
+  "09": {
+    "id": "09",
     "face": {
       "front": {
         "name": {
           "name": "Corin Wickes"
         },
         "type": "Agent",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/06.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/09.webp"
       }
     },
     "name": "Corin Wickes",
     "type": "Agent",
-    "cost": 0
+    "cost": 10
   },
-  "16": {
-    "id": "16",
+  "19": {
+    "id": "19",
     "face": {
       "front": {
         "name": {
           "name": "Housekeeper"
         },
         "type": "W-Engine",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/16.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/19.webp"
       }
     },
     "name": "Housekeeper",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "36": {
     "id": "36",
@@ -487,13 +489,13 @@
           "name": "Ellen Joe"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/36.webp"
       }
     },
     "name": "Ellen Joe",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
   "43": {
     "id": "43",
@@ -503,13 +505,13 @@
           "name": "Deep Sea Visitor"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/43.webp"
       }
     },
     "name": "Deep Sea Visitor",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
   "40": {
     "id": "40",
@@ -519,13 +521,13 @@
           "name": "Von Lycaon"
         },
         "type": "Agent",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/40.webp"
       }
     },
     "name": "Von Lycaon",
     "type": "Agent",
-    "cost": 0
+    "cost": 20
   },
   "47": {
     "id": "47",
@@ -535,141 +537,141 @@
           "name": "The Restrained"
         },
         "type": "W-Engine",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/47.webp"
       }
     },
     "name": "The Restrained",
     "type": "W-Engine",
-    "cost": 0
+    "cost": 20
   },
-  "11": {
-    "id": "11",
+  "14": {
+    "id": "14",
     "face": {
       "front": {
         "name": {
           "name": "Encrypted Master Tape"
         },
         "type": "Item",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/11.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/14.webp"
       }
     },
     "name": "Encrypted Master Tape",
     "type": "Item",
-    "cost": 0
+    "cost": 10
   },
-  "12": {
-    "id": "12",
+  "15": {
+    "id": "15",
     "face": {
       "front": {
         "name": {
           "name": "Fading Signal"
         },
         "type": "Item",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/12.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/15.webp"
       }
     },
     "name": "Fading Signal",
     "type": "Item",
-    "cost": 0
+    "cost": 10
   },
-  "10": {
-    "id": "10",
+  "13": {
+    "id": "13",
     "face": {
       "front": {
         "name": {
           "name": "Master Tape"
         },
         "type": "Item",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/10.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/13.webp"
       }
     },
     "name": "Master Tape",
     "type": "Item",
-    "cost": 0
+    "cost": 10
   },
-  "29": {
-    "id": "29",
+  "32": {
+    "id": "32",
     "face": {
       "front": {
         "name": {
           "name": "Disorder"
         },
         "type": "Action",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/29.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/32.webp"
       }
     },
     "name": "Disorder",
     "type": "Action",
-    "cost": 0
+    "cost": 10
   },
-  "30": {
-    "id": "30",
+  "33": {
+    "id": "33",
     "face": {
       "front": {
         "name": {
           "name": "Pity"
         },
         "type": "Action",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/30.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/33.webp"
       }
     },
     "name": "Pity",
     "type": "Action",
-    "cost": 0
+    "cost": 10
   },
-  "21": {
-    "id": "21",
+  "24": {
+    "id": "24",
     "face": {
       "front": {
         "name": {
           "name": "Hormone Punk - A"
         },
         "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/21.webp"
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/24.webp"
       }
     },
     "name": "Hormone Punk - A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 20
   },
-  "20": {
-    "id": "20",
+  "23": {
+    "id": "23",
     "face": {
       "front": {
         "name": {
           "name": "Hormone Punk - B"
         },
         "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/20.webp"
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/23.webp"
       }
     },
     "name": "Hormone Punk - B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 10
   },
-  "22": {
-    "id": "22",
+  "25": {
+    "id": "25",
     "face": {
       "front": {
         "name": {
           "name": "Hormone Punk - S"
         },
         "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/22.webp"
+        "cost": 40,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/25.webp"
       }
     },
     "name": "Hormone Punk - S",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 40
   },
   "49": {
     "id": "49",
@@ -679,13 +681,13 @@
           "name": "Inferno Metal - A"
         },
         "type": "Disc Drive",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/49.webp"
       }
     },
     "name": "Inferno Metal - A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 20
   },
   "48": {
     "id": "48",
@@ -695,13 +697,13 @@
           "name": "Inferno Metal - B"
         },
         "type": "Disc Drive",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/48.webp"
       }
     },
     "name": "Inferno Metal - B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 10
   },
   "50": {
     "id": "50",
@@ -711,108 +713,108 @@
           "name": "Inferno Metal - S"
         },
         "type": "Disc Drive",
-        "cost": 0,
+        "cost": 40,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/50.webp"
       }
     },
     "name": "Inferno Metal - S",
     "type": "Disc Drive",
-    "cost": 0
-  },
-  "24": {
-    "id": "24",
-    "face": {
-      "front": {
-        "name": {
-          "name": "Swing Jazz- A"
-        },
-        "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/24.webp"
-      }
-    },
-    "name": "Swing Jazz- A",
-    "type": "Disc Drive",
-    "cost": 0
-  },
-  "23": {
-    "id": "23",
-    "face": {
-      "front": {
-        "name": {
-          "name": "Swing Jazz- B"
-        },
-        "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/23.webp"
-      }
-    },
-    "name": "Swing Jazz- B",
-    "type": "Disc Drive",
-    "cost": 0
-  },
-  "25": {
-    "id": "25",
-    "face": {
-      "front": {
-        "name": {
-          "name": "Swing Jazz- S"
-        },
-        "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/25.webp"
-      }
-    },
-    "name": "Swing Jazz- S",
-    "type": "Disc Drive",
-    "cost": 0
+    "cost": 40
   },
   "27": {
     "id": "27",
     "face": {
       "front": {
         "name": {
-          "name": "Woodpecker Electro - A"
+          "name": "Swing Jazz- A"
         },
         "type": "Disc Drive",
-        "cost": 0,
+        "cost": 20,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/27.webp"
       }
     },
-    "name": "Woodpecker Electro - A",
+    "name": "Swing Jazz- A",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 20
   },
   "26": {
     "id": "26",
     "face": {
       "front": {
         "name": {
-          "name": "Woodpecker Electro - B"
+          "name": "Swing Jazz- B"
         },
         "type": "Disc Drive",
-        "cost": 0,
+        "cost": 10,
         "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/26.webp"
       }
     },
-    "name": "Woodpecker Electro - B",
+    "name": "Swing Jazz- B",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 10
   },
   "28": {
     "id": "28",
     "face": {
       "front": {
         "name": {
+          "name": "Swing Jazz- S"
+        },
+        "type": "Disc Drive",
+        "cost": 40,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/28.webp"
+      }
+    },
+    "name": "Swing Jazz- S",
+    "type": "Disc Drive",
+    "cost": 40
+  },
+  "30": {
+    "id": "30",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Woodpecker Electro - A"
+        },
+        "type": "Disc Drive",
+        "cost": 20,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/30.webp"
+      }
+    },
+    "name": "Woodpecker Electro - A",
+    "type": "Disc Drive",
+    "cost": 20
+  },
+  "29": {
+    "id": "29",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Woodpecker Electro - B"
+        },
+        "type": "Disc Drive",
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/29.webp"
+      }
+    },
+    "name": "Woodpecker Electro - B",
+    "type": "Disc Drive",
+    "cost": 10
+  },
+  "31": {
+    "id": "31",
+    "face": {
+      "front": {
+        "name": {
           "name": "Woodpecker Electro - S"
         },
         "type": "Disc Drive",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/28.webp"
+        "cost": 40,
+        "image": "https://raw.githubusercontent.com/Steakholder/ZZZ/main/31.webp"
       }
     },
     "name": "Woodpecker Electro - S",
     "type": "Disc Drive",
-    "cost": 0
+    "cost": 40
   }
 }
